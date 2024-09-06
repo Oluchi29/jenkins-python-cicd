@@ -1,8 +1,8 @@
-FROM python:3.7
+FROM python:alpine
 RUN mkdir /app
 ADD . /app
 WORKDIR /app
 RUN pip install -r requirements.txt
-RUN pip install --upgrade
+#RUN pip install --upgrade
 EXPOSE 5000
-CMD ["python","/app/main.py"]
+CMD ["python","main.py"]
